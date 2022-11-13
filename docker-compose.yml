@@ -41,7 +41,7 @@ services:
             context: .
             dockerfile: Dockerfile-nginx-angular
         volumes:
-            - ./sai-ecaa-app/www:/usr/share/nginx/html
+            - ./angular-build/www:/usr/share/nginx/html
         ports:
             - 8002:80
         networks:
