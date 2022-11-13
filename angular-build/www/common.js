@@ -438,59 +438,6 @@ const openURL = async (url, ev, direction, animation) => {
 
 
 
-/***/ }),
-
-/***/ 82304:
-/*!*******************************************************!*\
-  !*** ./src/app/services/realtime/realtime.service.ts ***!
-  \*******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "RealtimeService": () => (/* binding */ RealtimeService)
-/* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 64762);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 37716);
-/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/fire/database */ 84134);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs/operators */ 88002);
-
-
-
-
-let RealtimeService = class RealtimeService {
-    constructor(db) {
-        this.db = db;
-    }
-    getLevelData(path) {
-        return this.db.list(path).snapshotChanges()
-            .pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_0__.map)((actions) => {
-            const obj = {};
-            console.log(actions);
-            actions.map((data) => {
-                const key = data.key;
-                obj[key] = data.payload.val();
-                return;
-            });
-            return obj;
-        }));
-    }
-    updateControlData(controlData) {
-        this.db.database.ref('control/').set(controlData).then().catch();
-    }
-};
-RealtimeService.ctorParameters = () => [
-    { type: _angular_fire_database__WEBPACK_IMPORTED_MODULE_1__.AngularFireDatabase }
-];
-RealtimeService = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)([
-    (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.Injectable)({
-        providedIn: 'root'
-    })
-], RealtimeService);
-
-
-
 /***/ })
 
 }]);

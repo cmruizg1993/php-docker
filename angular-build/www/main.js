@@ -46,20 +46,8 @@ const routes = [
         pathMatch: 'full'
     },
     {
-        path: 'intro',
-        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_intro_intro_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./intro/intro.module */ 10025)).then(m => m.IntroPageModule)
-    },
-    {
-        path: 'menu',
-        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_menu_menu_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./menu/menu.module */ 32825)).then(m => m.MenuPageModule)
-    },
-    {
         path: 'monitoring',
-        loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_monitoring_monitoring_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./monitoring/monitoring.module */ 6129)).then(m => m.MonitoringPageModule)
-    },
-    {
-        path: 'control',
-        loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_control_control_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./control/control.module */ 21477)).then(m => m.ControlPageModule)
+        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_monitoring_monitoring_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./monitoring/monitoring.module */ 6129)).then(m => m.MonitoringPageModule)
     },
     {
         path: 'login',
@@ -70,12 +58,16 @@ const routes = [
         loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_cultivos_cultivos_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./cultivos/cultivos.module */ 29815)).then(m => m.CultivosPageModule)
     },
     {
-        path: 'parametros',
-        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_parametros_parametros_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./parametros/parametros.module */ 78605)).then(m => m.ParametrosPageModule)
-    },
-    {
         path: 'reportes',
         loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_reportes_reportes_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./reportes/reportes.module */ 41598)).then(m => m.ReportesPageModule)
+    },
+    {
+        path: 'ciclos',
+        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_ciclos_ciclos_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./ciclos/ciclos.module */ 26919)).then(m => m.CiclosPageModule)
+    },
+    {
+        path: 'invernaderos',
+        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_invernaderos_invernaderos_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./invernaderos/invernaderos.module */ 63830)).then(m => m.InvernaderosPageModule)
     },
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -170,17 +162,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "AppModule": () => (/* binding */ AppModule)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 64762);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 37716);
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser */ 39075);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/router */ 39895);
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic/angular */ 80476);
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app.component */ 55041);
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app-routing.module */ 90158);
-/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/fire */ 50057);
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../environments/environment */ 92340);
-/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/fire/database */ 84134);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common/http */ 91841);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 64762);
+/* harmony import */ var _interceptors_auth_interceptor_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./interceptors/auth-interceptor.service */ 63730);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 37716);
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/platform-browser */ 39075);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/router */ 39895);
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic/angular */ 80476);
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component */ 55041);
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app-routing.module */ 90158);
+/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/fire */ 50057);
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../environments/environment */ 92340);
+/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/fire/database */ 84134);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/common/http */ 91841);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/forms */ 3679);
+
+
 
 
 
@@ -194,21 +190,82 @@ __webpack_require__.r(__webpack_exports__);
 
 let AppModule = class AppModule {
 };
-AppModule = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
-    (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.NgModule)({
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent],
+AppModule = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.NgModule)({
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_1__.AppComponent],
         entryComponents: [],
         imports: [
-            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.BrowserModule, _ionic_angular__WEBPACK_IMPORTED_MODULE_6__.IonicModule.forRoot(),
-            _app_routing_module__WEBPACK_IMPORTED_MODULE_1__.AppRoutingModule,
-            _angular_fire__WEBPACK_IMPORTED_MODULE_7__.AngularFireModule.initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_2__.environment.firebaseConfig),
-            _angular_fire_database__WEBPACK_IMPORTED_MODULE_8__.AngularFireDatabaseModule,
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_9__.HttpClientModule,
+            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__.BrowserModule,
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_7__.IonicModule.forRoot(),
+            _app_routing_module__WEBPACK_IMPORTED_MODULE_2__.AppRoutingModule,
+            _angular_fire__WEBPACK_IMPORTED_MODULE_8__.AngularFireModule.initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_3__.environment.firebaseConfig),
+            _angular_fire_database__WEBPACK_IMPORTED_MODULE_9__.AngularFireDatabaseModule,
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_10__.HttpClientModule,
+            _angular_forms__WEBPACK_IMPORTED_MODULE_11__.FormsModule
         ],
-        providers: [{ provide: _angular_router__WEBPACK_IMPORTED_MODULE_10__.RouteReuseStrategy, useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_6__.IonicRouteStrategy }],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent],
+        providers: [{ provide: _angular_router__WEBPACK_IMPORTED_MODULE_12__.RouteReuseStrategy, useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_7__.IonicRouteStrategy },
+            { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_10__.HTTP_INTERCEPTORS, useClass: _interceptors_auth_interceptor_service__WEBPACK_IMPORTED_MODULE_0__.AuthInterceptorService, multi: true }],
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_1__.AppComponent],
     })
 ], AppModule);
+
+
+
+/***/ }),
+
+/***/ 63730:
+/*!**********************************************************!*\
+  !*** ./src/app/interceptors/auth-interceptor.service.ts ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AuthInterceptorService": () => (/* binding */ AuthInterceptorService)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 64762);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ 40205);
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../services/auth.service */ 37556);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 91841);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 37716);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ 5304);
+
+
+
+
+
+
+let AuthInterceptorService = class AuthInterceptorService {
+    constructor(authService) {
+        this.authService = authService;
+    }
+    intercept(request, next) {
+        const token = this.authService.currentUser.token;
+        if (token) {
+            // If we have a token, we set it to the header
+            request = request.clone({
+                setHeaders: { Authorization: `Bearer ${token}` }
+            });
+        }
+        return next.handle(request).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_1__.catchError)((err) => {
+            if (err instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_2__.HttpErrorResponse) {
+                if (err.status === 401) {
+                    // redirect user to the logout page
+                }
+            }
+            return (0,rxjs__WEBPACK_IMPORTED_MODULE_3__.throwError)(err);
+        }));
+    }
+};
+AuthInterceptorService.ctorParameters = () => [
+    { type: _services_auth_service__WEBPACK_IMPORTED_MODULE_0__.AuthService }
+];
+AuthInterceptorService = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.Injectable)({
+        providedIn: 'root'
+    })
+], AuthInterceptorService);
 
 
 
@@ -381,8 +438,31 @@ let ApiService = class ApiService {
     post(endpoint, params = {}) {
         return this.http.post(this.getFinalUrl(endpoint), params);
     }
+    put(endpoint, params = {}) {
+        return this.http.put(this.getFinalUrl(endpoint), params);
+    }
+    delete(endpoint, params = {}) {
+        return this.http.delete(this.getFinalUrl(endpoint));
+    }
     getFinalUrl(endpoint) {
         return _environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.baseUrl + endpoint;
+    }
+    /*CRUD CULTIVOS */
+    obtenerCultivos() {
+        let endpoint = '/cultivo';
+        return this.get(endpoint).toPromise();
+    }
+    guardarCultivo(cultivo) {
+        let endpoint = '/cultivo/cretae';
+        return this.post(endpoint, cultivo).toPromise();
+    }
+    editarCultivo(cultivo) {
+        let endpoint = '/cultivo/edit';
+        return this.put(endpoint, cultivo).toPromise();
+    }
+    borrarCultivo(cultivo) {
+        let endpoint = '/cultivo/delete/' + cultivo.id;
+        return this.delete(endpoint).toPromise();
     }
 };
 ApiService.ctorParameters = () => [
@@ -525,7 +605,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 const environment = {
     production: false,
-    baseUrl: 'http://localhost:8001/',
+    baseUrl: 'http://localhost:8080/',
     firebaseConfig: {
         apiKey: 'AIzaSyAJYp_nwwfabR4ENM7CGHQNJLoY3jI_39Q',
         authDomain: 'sai-ecaa.firebaseapp.com',
@@ -1135,7 +1215,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-app>\r\n  <ion-menu contentId=\"main-content\">\r\n    <ion-header>\r\n      <ion-toolbar>\r\n        <ion-title>Menú</ion-title>\r\n      </ion-toolbar>\r\n    </ion-header>\r\n    <ion-content class=\"ion-padding\">\r\n      <ion-list>\r\n        <ion-item button routerLink=\"/monitoring\">\r\n          <ion-label>Monitoreo</ion-label>\r\n        </ion-item>\r\n        <ion-item button >\r\n          <ion-label>Invernaderos</ion-label>\r\n        </ion-item>\r\n        <ion-item button>\r\n          <ion-label>Ciclos de Cultivo</ion-label>\r\n        </ion-item>\r\n        <ion-item button routerLink=\"/cultivos\">\r\n          <ion-label>Cultivos</ion-label>\r\n        </ion-item>\r\n        <ion-item button>\r\n          <ion-label>Reportes</ion-label>\r\n        </ion-item>\r\n      </ion-list>\r\n    </ion-content>\r\n  </ion-menu>\r\n  <ion-header >\r\n    <ion-toolbar color=\"light\">\r\n      <div class=\"title\">\r\n        <ion-text>\r\n          <p>Sistema de automatización de invernaderos</p>\r\n        </ion-text>\r\n      </div>\r\n      <ion-buttons slot=\"start\" *ngIf=\"logged\">\r\n        <ion-menu-button></ion-menu-button>\r\n      </ion-buttons>\r\n      <ion-buttons slot=\"end\">\r\n\r\n        <ion-button color=\"primary\" [routerLink]=\"'/login'\" shape=\"round\" *ngIf=\"!logged && !isInLogin\">\r\n          <ion-icon slot=\"end\" name=\"person-circle-outline\" ></ion-icon>\r\n          Iniciar Sesión\r\n        </ion-button>\r\n        <div style=\"margin-right: 30px;\" *ngIf=\"logged\">\r\n          <ion-text>Usuario:</ion-text>\r\n          <ion-text color=\"primary\">{{user.username}}</ion-text>\r\n\r\n        </div>\r\n        <ion-button color=\"danger\" *ngIf=\"logged\" (click)=\"this.auth.logout();\">\r\n          <ion-icon slot=\"end\" name=\"exit-outline\" ></ion-icon>\r\n          Cerrar Sesión\r\n        </ion-button>\r\n      </ion-buttons>\r\n    </ion-toolbar>\r\n  </ion-header>\r\n  <div class=\"ion-page\" id=\"main-content\">\r\n    <ion-router-outlet></ion-router-outlet>\r\n  </div>\r\n\r\n</ion-app>\r\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-app>\r\n  <ion-menu contentId=\"main-content\">\r\n    <ion-header>\r\n      <ion-toolbar>\r\n        <ion-title>Menú</ion-title>\r\n      </ion-toolbar>\r\n    </ion-header>\r\n    <ion-content class=\"ion-padding\">\r\n      <ion-list>\r\n        <ion-item button routerLink=\"/monitoring\">\r\n          <ion-label>Monitoreo</ion-label>\r\n        </ion-item>\r\n        <ion-item button routerLink=\"/invernaderos\">\r\n          <ion-label>Invernaderos</ion-label>\r\n        </ion-item>\r\n        <ion-item button routerLink=\"/ciclos\">\r\n          <ion-label>Ciclos de Cultivo</ion-label>\r\n        </ion-item>\r\n        <ion-item button routerLink=\"/cultivos\">\r\n          <ion-label>Cultivos</ion-label>\r\n        </ion-item>\r\n        <ion-item button routerLink=\"/reportes\">\r\n          <ion-label>Reportes</ion-label>\r\n        </ion-item>\r\n      </ion-list>\r\n    </ion-content>\r\n  </ion-menu>\r\n  <ion-header >\r\n    <ion-toolbar color=\"light\">\r\n      <div class=\"title\">\r\n        <ion-text>\r\n          <p>Sistema de automatización de invernaderos</p>\r\n        </ion-text>\r\n      </div>\r\n      <ion-buttons slot=\"start\" *ngIf=\"logged\">\r\n        <ion-menu-button></ion-menu-button>\r\n      </ion-buttons>\r\n      <ion-buttons slot=\"end\">\r\n\r\n        <ion-button color=\"primary\" [routerLink]=\"'/login'\" shape=\"round\" *ngIf=\"!logged && !isInLogin\">\r\n          <ion-icon slot=\"end\" name=\"person-circle-outline\" ></ion-icon>\r\n          Iniciar Sesión\r\n        </ion-button>\r\n        <div style=\"margin-right: 30px;\" *ngIf=\"logged\">\r\n          <ion-text>Usuario:</ion-text>\r\n          <ion-text color=\"primary\">{{user.username}}</ion-text>\r\n\r\n        </div>\r\n        <ion-button color=\"danger\" *ngIf=\"logged\" (click)=\"this.auth.logout();\">\r\n          <ion-icon slot=\"end\" name=\"exit-outline\" ></ion-icon>\r\n          Cerrar Sesión\r\n        </ion-button>\r\n      </ion-buttons>\r\n    </ion-toolbar>\r\n  </ion-header>\r\n  <div class=\"ion-page\" id=\"main-content\">\r\n    <ion-router-outlet></ion-router-outlet>\r\n  </div>\r\n\r\n</ion-app>\r\n");
 
 /***/ })
 
