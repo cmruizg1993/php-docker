@@ -4,3 +4,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%';
 FLUSH PRIVILEGES;
 git clone https://github.com/cmruizg777/tesis-aplicacion-movil.git sai-ecaa-app
 git clone https://github.com/cmruizg1993/sai-ecaa.git php-project
+sudo dnf module list nodejs
+sudo dnf module enable nodejs:14
+sudo dnf install nodejs
+npm i -g @angular/cli
