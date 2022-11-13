@@ -1,4 +1,4 @@
-FROM php:fpm-stretch
+FROM php:fpm-stretch:7.3.12
 
 RUN apt-get update && apt-get install -y
 
